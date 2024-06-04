@@ -1,0 +1,13 @@
+#version: "3.8"
+#services:
+#  mongodb:
+#    image: mongo
+#    container_name: mongotestdb
+#    ports:
+#      - 27117:27017
+#    volumes:
+#      - ./data/mongodb:/data/db
+#    environment:
+#      - MONGO_INITDB_ROOT_USERNAME=root
+#      - MONGO_INITDB_ROOT_PASSWORD=1234
+#      - MONGO_INITDB_DATABASE=fluxdb

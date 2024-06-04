@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: test
+  data:
+    mongodb:
+      host: 223.130.142.132
+      port: 27117
+      authentication-database: admin
+      username: root
+      password: 1234
+      database: mongotestdb
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+        type: trace
+jwt:
+  iss: von.com
+  exp: 24 * 60 * 60 * 1000
+  secret: kjhjmtkjhjmtkjhjmtkjhjmtkjhjmtkjhjmtkjhjmtkjhjmtkjhjmt
