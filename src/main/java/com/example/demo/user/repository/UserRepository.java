@@ -1,17 +1,15 @@
 package com.example.demo.user.repository;
 
 
-import com.example.demo.user.model.User;
+import com.example.demo.user.model.UserModel;
+import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;
-
-import java.util.Optional;
-
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 @Repository
-public interface UserRepository  {
+public interface UserRepository extends ReactiveMongoRepository<UserModel, String> {
+    Flux<UserModel> findByLastName(String lastName);
 
-    Optional<User> findByUsername(String username);
-
-
-
+    Mono<UserModel> findByEmail(String email);
 }

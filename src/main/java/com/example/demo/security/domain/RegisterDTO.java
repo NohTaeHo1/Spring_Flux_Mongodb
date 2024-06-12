@@ -9,7 +9,8 @@ import java.io.Serializable;
 
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class RegisterDTO {
+public class RegisterDTO implements Serializable {
+
     //it's a Data Trasfer Object for registration
     String firstName ;
     String lastName ;

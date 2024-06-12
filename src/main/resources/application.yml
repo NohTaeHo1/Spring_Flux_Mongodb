@@ -1,43 +1,45 @@
-spring:
-  application:
-    name: rootapp
-  data:
-    mongodb:
-      uri: mongodb://root:root@db-container:27017/rootdb
-  sql:
-    init:
-      mode: always
-      encoding: UTF-8
-logging:
-  level:
-    org:
-      hibernate:
-        SQL: debug
-        type: trace
-
-jwt:
-  secret: kjhjmtkjhjmtkjhjmtkjhjmtkjhjmtkjhjmtkjhjmtkjhjmtkjhjmt
-  expiration: 3600
-
 #spring:
+#  main:
+#    allow-bean-definition-overriding: true
 #  application:
-#    name: test
+#    name: rootapp
 #  data:
 #    mongodb:
-#      host: 223.130.142.132
-#      port: 27117
-#      authentication-database: admin
-#      username: root
-#      password: 1234
-#      database: mongotestdb
-#
+#      uri: mongodb://root:root@db-container:27017/rootdb
+#  sql:
+#    init:
+#      mode: always
+#      encoding: UTF-8
 #logging:
 #  level:
 #    org:
 #      hibernate:
 #        SQL: debug
 #        type: trace
+#
 #jwt:
-#  iss: von.com
-#  exp: 24 * 60 * 60 * 1000
 #  secret: kjhjmtkjhjmtkjhjmtkjhjmtkjhjmtkjhjmtkjhjmtkjhjmtkjhjmt
+#  expiration: 3600
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: test
+  data:
+    mongodb:
+      uri: mongodb://root:root@223.130.142.132:27017/rootdb?authSource=admin&retryWrites=true&w=majority
+  sql:
+    init:
+      mode: always
+      encoding: UTF-8
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+        type: trace
+jwt:
+  secret: kjhjmtkjhjmtkjhjmtkjhjmtkjhjmtkjhjmtkjhjmtkjhjmtkjhjmt
+  expiration: 3600
